@@ -18,7 +18,7 @@ function Header() {
     return (
         <>
             <div className="w-full">
-                <div className="bg-white font-medium text-black flex justify-between items-center relative text-xs p-2">
+                <div className="bg-white font-medium text-black flex justify-between items-center relative text-xs py-2">
                     <div className="flex pl-20 items-center space-x-1">
                         <img
                             src="/assets/images/Logo.png"
@@ -42,7 +42,7 @@ function Header() {
                     </div>
                 </div>
 
-                <div className="bg-zinc-700 text-white  flex justify-between items-center text-base font-normal p-5 pr-20">
+                <div className="bg-zinc-700 text-white  flex justify-between items-center text-base font-normal py-5 pr-20">
                     <div className="flex space-x-10 pl-20">
                         <Link to="/">
                             Browse Categories

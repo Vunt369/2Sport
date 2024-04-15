@@ -6,9 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        rubikmonoone: ['"Rubik Mono One"', 'monospace'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
       backgroundImage: {
         'banner': "url('/assets/images/banner.png')",
-        'textBanner': "url('/assets/images/textBanner.png')"
+        'footer': "url('/assets/images/footer.png')"
       }
     },
   },
