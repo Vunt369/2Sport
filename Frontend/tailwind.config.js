@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         rubikmonoone: ['"Rubik Mono One"', 'monospace'],
         poppins: ['Poppins', 'sans-serif'],
+        alfa: ['Alfa Slab One', 'serif'],
       },
       backgroundImage: {
         'banner': "url('/assets/images/banner.png')",

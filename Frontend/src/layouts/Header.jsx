@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link, NavLink } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,9 +12,15 @@ import {
 }
     from '@fortawesome/free-solid-svg-icons';
 import GetCurrentLocation from "../components/GetCurrentLocation";
-
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 function Header() {
+    const { t } = useTranslation("translation");
+    const changeLanguage = (e) => {
+        const languageValue = e.target.value
+        i18n.changeLanguage(languageValue);
+    }
     return (
         <>
             <div className="w-full relative z-50">
@@ -42,26 +47,30 @@ function Header() {
                         <div className="flex pr-20 items-center space-x-4">
                             <p><FontAwesomeIcon icon={faPhone} className="pr-1" />+84 123-456-789</p>
                             <p><FontAwesomeIcon icon={faEnvelope} className="pr-1" />support@gmail.com</p>
+                            <select onChange={changeLanguage} className="text-orange-500">
+                                <option value="eng">English</option>
+                                <option value="vie">Vietnamese</option>
+                            </select>
                         </div>
                     </div>
 
                     <div className="bg-zinc-800/80 backdrop-blur-lg text-white  flex justify-between items-center text-base font-normal py-5 pr-20">
-                        <div className="flex space-x-10 pl-20">
-                            <Link to="/">
-                                Browse Categories
+                        <div className="flex space-x-10 pl-20 ">
+                            <Link to="/" >
+                            {t("hcat")}
                                 <FontAwesomeIcon icon={faCaretDown} className="pl-2" />
                             </Link>
                             <Link to="/">
-                                Product
+                            {t("hproduct")}
                                 <FontAwesomeIcon icon={faCaretDown} className="pl-2" />
                             </Link>
-                            <Link to="/">Blog</Link>
-                            <Link to="/">About</Link>
-                            <Link to="/">Contact</Link>
+                            <Link to="/">{t("hblog")}</Link>
+                            <Link to="/">{t("habout")}</Link>
+                            <Link to="/">{t("hcontact")}</Link>
                         </div>
                         <div className="flex space-x-4  ">
-                            <Link to="/" className="border-r-2 pr-4"><FontAwesomeIcon icon={faUser} className="pr-1" /> Sign in</Link>
-                            <Link to="/"><FontAwesomeIcon icon={faCartShopping} className="pr-1" /> Cart</Link>
+                            <Link to="/" className="border-r-2 pr-4"><FontAwesomeIcon icon={faUser} className="pr-1" /> {t("loginbtn")}</Link>
+                            <Link to="/"><FontAwesomeIcon icon={faCartShopping} className="pr-1" /> {t("cartbtn")}</Link>
                         </div>
                     </div>
                 </div>

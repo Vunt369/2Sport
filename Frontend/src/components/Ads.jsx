@@ -30,7 +30,7 @@ function Ads() {
     }, [controls]);
 
     return (
-        <div className="flex py-5 space-x-10 justify-between items-center">
+        <div className="flex py-5 space-x-5 justify-between items-center">
             {/* title */}
             <motion.div
                 animate={controls}

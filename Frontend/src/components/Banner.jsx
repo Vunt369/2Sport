@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function Banner() {
-
+    const { t, i18n } = useTranslation("translation");
+    const language = i18n.language;
     return (
         <>
             <div className="bg-banner bg-cover bg-center h-full">
@@ -18,7 +20,7 @@ function Banner() {
                             }}
                             className="flex-col flex pl-20"
                         >
-                            <p className="text-7xl font-rubikmonoone" >PLAY MORE, <br /> PAY LESS </p>
+                            <p className={language === 'eng' ? 'font-rubikmonoone text-7xl' : 'font-alfa text-7xl'} >{t("tit1")} <br /> {t("tit2")}</p> 
                             <p className="pt-10 pb-10 font-poppins text-xl text-wrap">Welcome to Your Ultimate Destination for <br /> Gently Used Sporting Excellence –
                                 Where the Game Never Ends,<br /> and the Savings Are Endless!</p>
                             <button className="bg-orange-500 font-poppins font-semibold text-white text-xl py-3 px-10 w-fit">SHOP NOW</button>
