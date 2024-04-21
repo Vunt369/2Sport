@@ -5,7 +5,7 @@ function Footer() {
     return (
         <div className="bg-zinc-700 h-full">
             <div className="bg-footer bg-cover bg-center flex justify-center items-center">
-                <h1 className="text-3xl py-20 text-white font-rubikmonoone">
+                <h1 className="text-3xl py-20 text-white font-rubikmonoone drop-shadow-md">
                     Follow us on
                     <Link to="/" className="underline underline-offset-2 pl-8">Facebook</Link>
                 </h1>

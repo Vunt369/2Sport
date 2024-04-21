@@ -6,7 +6,6 @@ import LandingPage from './pages/LandingPage';
 import Footer from './layouts/Footer';
 
 function App() {
-
   return (
     <>
      <Header/>
