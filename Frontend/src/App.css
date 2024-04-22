@@ -8,11 +8,11 @@
   }
   .progress-bar {
     position: fixed;
-    top: 0;
+    top: auto;
     left: 0;
     right: 0;
-    height: 10px;
-    background: var(--red);
+    height: 5px;
+    background: #FA7D0B;
     transform-origin: 0%;
   }
   
